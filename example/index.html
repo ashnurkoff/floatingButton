@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #hero {
+            height: 1000px;
+            background-color: lightblue;
+        }
+
+        #content {
+            height: 2000px;
+            background-color: lightgray;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="floatingButton">Get This Deal</button>
+    <div id="hero">Hero content goes here</div>
+    <div id="content">Other content on the page...</div>
+
+    <!-- Include the jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Include the floatingButton.js library -->
+    <link rel="stylesheet" href="../floatingButton.css">
+    <script src="../floatingButton.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            FloatingButton.init({
+                buttonSelector: '#floatingButton',
+                triggerElementSelector: '#hero',
+                offset: 300,
+                activeClass: 'active'
+            });
+        });
+    </script>
+</body>
+
+</html>
